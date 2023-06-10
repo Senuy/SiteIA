@@ -15,15 +15,26 @@
 
         <!--aqui vai uma imagem de logo-->
         <img src="IMG/LOGO.png" alt="" class="logo">
-
-        <nav class="navBbar">
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav class="navBar">
             <ul class="navMenu">
                 <!-- Início de items da bara de navegação-->
                 <li class="navItem"><a href="index.html" class="navLink">Home</a></li>
 
                 <li class="navItem"><a href="sobre.html" class="navLink">Sobre</a></li>
 
-                <li class="navItem"><a href="cadastro.html" class="navLink">Cadastro</a></li>
+                <li class="navItem">
+                    <div class="dropdown"><button class="dropDownButton">Cadastro</button>
+                        <div class="dropdownContent">
+                            <a href="produtos.html">Produtos</a>
+                            <a href="clientes.html">Clientes</a>
+                        </div>
+                    </div>
+                </li>
 
                 <li class="navItem"><a href="login.html" class="navLink">Login</a></li>
 
@@ -44,6 +55,7 @@
         <div class="iahoje"></div>
         <div class="iadev"></div>
     </div>
+    <script src="mobile-navbar.js"></script>
 </body>
 
 </html>
