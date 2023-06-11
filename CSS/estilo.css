@@ -17,7 +17,6 @@ body {
     --cor3: #01161F;
     --cor4: #23566B;
     --cor5: #0682B8;
-    --trasparent: 1;
 }
 
 body {
@@ -47,7 +46,7 @@ body {
     justify-content: end;
 }
 
-@media(max-width: 999px) {
+@media(max-width: 768px) {
     body {
         overflow-x: hidden;
     }
@@ -133,6 +132,11 @@ body {
     margin-top: 10px;
 }
 
+.navItem-sobre {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -178,11 +182,23 @@ body {
 
 .navLink {
     text-decoration: none;
+    border: none;
+    background-color: var(--cor2);
     color: var(--cor5);
     font-weight: 600;
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
 
+}
+
+.nav-button {
+    text-decoration: none;
+    border: none;
+    background-color: var(--cor2);
+    color: var(--cor5);
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* carrousel*/
@@ -197,33 +213,106 @@ body {
 
 
 
-/*inicio config div container*/
-.div-container {
+/*inicio config main container*/
+.main-container {
     display: flex;
     position: absolute;
     top: 39vw;
-    height: 250px;
+    height: 300px;
 }
 
 .historia,
 .iahoje,
 .iadev {
+    display: block;
     margin-top: 50px;
     border-radius: 10px;
     background-color: var(--cor2);
     margin: 2px;
-    flex-basis: 33.5%;
-    height: 100%;
+    flex-basis: 100%;
+    height: auto;
     width: 100%;
     box-shadow: 0px 0px 5px var(--cor2);
     z-index: -999;
+    overflow: auto;
 }
 
 .textoHistoria {
+    font-size: 17px;
     padding: 30px;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
     color: var(--cor5);
     font-weight: 600;
     z-index: -999;
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        top: 50%;
+        flex-wrap: wrap;
+        /* Empilhar divs em telas menores */
+        justify-content: center;
+        /* Centralizar divs empilhadas */
+        align-items: center;
+        /* Centralizar divs empilhadas */
+        height: auto;
+        /* Altura ajustável com base no conteúdo */
+        z-index: -999;
+    }
+
+    .historia,
+    .iahoje,
+    .iadev {
+        flex-basis: 100%;
+        /* Divs ocupam 100% da largura */
+    }
+}
+
+.main-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2px;
+    background-color: var(--cor2);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid black;
+    z-index: -999;
+}
+
+.footer {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor5);
+}
+
+.titulo {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor5);
+
+}
+
+.data {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor5);
+
+}
+
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: row;
+        align-items: center;
+        padding: 5px;
+        z-index: -999;
+    }
+
+    .main-footer .footer {
+        margin-bottom: 1px;
+    }
+
+    .main-footer .titulo {
+        margin-bottom: 1px;
+    }
 }

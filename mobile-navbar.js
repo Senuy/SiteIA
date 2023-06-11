@@ -37,3 +37,11 @@ const mobileNavbar = new MobileNavbar(
     ".navItem",
 );
 mobileNavbar.init()
+
+const button = document.querySelector('.nav-button');
+
+const mainSection = document.querySelector('main');
+
+button.addEventListener('cick', () => {
+    mainSection.scrollIntoView({ behavior: 'smoth' });
+})
